@@ -1,0 +1,25 @@
+&T
+Type of variable
+
+%v
+Value of variable
+
+%%
+Literal %
+
+&t
+True/False från värdet
+
+%b
+Binary
+
+%e
+scientific notation
+
+%s
+string
+
+%q
+string with " "
+
+Padding och percision finns också
