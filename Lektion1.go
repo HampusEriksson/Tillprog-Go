@@ -40,6 +40,7 @@ func main() {
 	scanner.Scan()
 	user_age, _ := strconv.ParseInt(scanner.Text(), 10, 64)
 	fmt.Println(name, user_age)
+	fmt.Println(float32(5) / float32(2))
 	// Operators
 	/*
 		+ - / * %
