@@ -2,7 +2,7 @@
 
 ## Dessa uppgifter är tagna ifrån https://github.com/korthaj/pallinda21
 
-### Förkunskaper
+### Förkunskaper Uppgift 1-3
 
 Read the following:
 
@@ -69,9 +69,7 @@ func main() {
 }
 ```
 
-# Uppgift 2 - Denna uppgift är tagen ifrån https://github.com/korthaj/pallinda21
-
-### Förkunskaper
+### Förkunskaper Uppgift 4-6
 
 Read the following:
 
@@ -82,7 +80,7 @@ Read the following:
   - [Detecting data races](http://yourbasic.org/golang/detect-data-races/)
   - [Deadlock](http://yourbasic.org/golang/detect-deadlock/)
 
-### Task 1 - Debugging Concurrent Programs (HANDIN)
+### Uppgift 4 - Debugging Concurrent Programs (HANDIN)
 
 Explain what is wrong in the code below, and then fix the code so that all data really passes
 through the channel and gets printed.
@@ -132,7 +130,7 @@ func Print(ch <-chan int) {
 
 See: [bug02.go](code/bug02.go) for source code to modify.
 
-### Task 2 - Many Senders; Many Receivers (HANDIN)
+### Uppgift 5 - Many Senders; Many Receivers (HANDIN)
 
 The program [many2many.go](code/many2many.go) contains four producers that together send 32 strings over a channel.
 At the other end there are two consumers that receive the strings.
@@ -147,7 +145,7 @@ Try first to reason your way through, and then test your hypothesis by changing 
 
 Finally, modify the code by adding a new WaitGroup that waits for all consumers to finish.
 
-### Task 3 - Pythia, the Oracle of Delphi (HANDIN)
+### Uppgift 6 - Pythia, the Oracle of Delphi (HANDIN)
 
 The code in [oracle.go](code/oracle.go) contains the outline for a program that will answer 'questions'.
 Complete the `Oracle` function. You should not modify the `main` function or other function signatures.
@@ -168,9 +166,7 @@ Whilst the `Oracle` function is the most important of the assignment, you may al
 - The program can seem more human if the Oracle prints it answers one character at a time
 - Take a look at the story of [ELIZA](https://en.wikipedia.org/wiki/ELIZA)
 
-# Uppgift 3 - Denna uppgift är tagen ifrån https://github.com/korthaj/pallinda21
-
-### Förkunskaper
+### Förkunskaper Uppgift 7-9
 
 Read the following:
 
@@ -180,7 +176,7 @@ Read the following:
   - [Create a new image](https://yourbasic.org/golang/create-image/)
   - [HTTP server example](https://yourbasic.org/golang/http-server-example/)
 
-### Task 1 - Matching Behaviour (HANDIN)
+### Uppgift 7 - Matching Behaviour
 
 Take a look at the program [matching.go](code/matching.go). Explain what happens and why it happens if you make the following changes. Try first to reason about it, and then test your hypothesis by changing and running the program.
 
@@ -191,7 +187,7 @@ Take a look at the program [matching.go](code/matching.go). Explain what happens
 
 > **Hint:** Think about the order of the instructions and what happens with arrays of different lengths.
 
-### Task 2 - Fractal Images (HANDIN)
+### Uppgift 8 - Fractal Images
 
 The file [julia.go](code/julia.go) contains a program that creates images and writes them to file. The program is pretty slow. Your assignment is to divide the computations so that they run in parallel on all available CPUs. Use the ideas from the example in the [efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/) section of the course literature.
 
@@ -201,7 +197,7 @@ How many CPUs does you program use? How much faster is your parallel version?
 
 > **Hint:** In more recent versions of Golang (since 1.5), the runtime will default to use as many operating system threads as it is allowed. To see differences in behaviour, refer to the [GOMAXPROCS](https://golang.org/pkg/runtime/#GOMAXPROCS) function and vary the value.
 
-### Task 3 - Weather station (HANDIN)
+### Uppgift 9 - Weather station
 
 The file [server.go](code/server.go) contains a program that simulates three independent weather stations that show the temperature at KTH. The results are published at the following addresses once the serves are operational:
 
