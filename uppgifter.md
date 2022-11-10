@@ -1,4 +1,6 @@
-# Uppgift 1 - Denna uppgift är tagen ifrån https://github.com/korthaj/pallinda21
+# Uppgifter GO i Tillämpad Programmering
+
+# Denna uppgift är tagen ifrån https://github.com/korthaj/pallinda21
 
 ### Förkunskaper
 
