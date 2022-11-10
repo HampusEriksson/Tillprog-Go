@@ -139,7 +139,7 @@ Try first to reason your way through, and then test your hypothesis by changing 
 
 Finally, modify the code by adding a new WaitGroup that waits for all consumers to finish.
 
-### Uppgift 6 - Pythia, the Oracle of Delphi (HANDIN)
+### Uppgift 6 - Pythia, the Oracle of Delphi
 
 The code in [oracle.go](code/oracle.go) contains the outline for a program that will answer 'questions'.
 Complete the `Oracle` function. You should not modify the `main` function or other function signatures.
@@ -164,11 +164,10 @@ Whilst the `Oracle` function is the most important of the assignment, you may al
 
 Read the following:
 
-- Read the following from the [Step-by-step guide to concurrency](http://yourbasic.org/golang/concurrent-programming/)
-  - [Mutual exclusion](http://yourbasic.org/golang/mutex-explained/)
-  - [Efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/)
-  - [Create a new image](https://yourbasic.org/golang/create-image/)
-  - [HTTP server example](https://yourbasic.org/golang/http-server-example/)
+- [Mutual exclusion](http://yourbasic.org/golang/mutex-explained/)
+- [Efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/)
+- [Create a new image](https://yourbasic.org/golang/create-image/)
+- [HTTP server example](https://yourbasic.org/golang/http-server-example/)
 
 ### Uppgift 7 - Matching Behaviour
 
