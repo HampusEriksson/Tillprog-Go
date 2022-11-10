@@ -2,24 +2,22 @@
 
 ## Dessa uppgifter är tagna ifrån https://github.com/korthaj/pallinda21
 
+[Step-by-step guide to concurrency](http://yourbasic.org/golang/concurrent-programming/)
+
 ### Förkunskaper Uppgift 1-3
 
-Read the following:
-
-- Read [Why Go? – Key advantages you may have overlooked](https://yourbasic.org/golang/advantages-over-java-python/)
-- Read the following from the [Step-by-step guide to concurrency](http://yourbasic.org/golang/concurrent-programming/)
-  - [Goroutines](http://yourbasic.org/golang/goroutines-explained/)
-  - [Channels](https://yourbasic.org/golang/channels-explained/)
+- [Why Go? – Key advantages you may have overlooked](https://yourbasic.org/golang/advantages-over-java-python/)
+- [Goroutines](http://yourbasic.org/golang/goroutines-explained/)
+- [Channels](https://yourbasic.org/golang/channels-explained/)
 
 ### Uppgift 1
 
-In this task we shall follow the online exercises hosted on [A Tour of Go](http://tour.golang.org/welcome/1). Start at the beginning and read through the tutorial. You are expected to submit solutions for the following exercises:
+I denna uppgift ska du göra två uppgifter från [A Tour of Go](http://tour.golang.org/welcome/1). Dessa uppgifter är:
 
 - [Loops and Functions](http://tour.golang.org/flowcontrol/8)
 - [Maps](http://tour.golang.org/moretypes/23)
-- [Fibbonacci Closure](http://tour.golang.org/moretypes/26)
 
-Remember to format your code. Go has a unapologetic tool built-in that will reformat your code according to a set of style rules made by the designers of the language. To run the format utility, use the following command for all submissions:
+Kom ihåg att formatera koden. GO har ett inbyggt kommand som du kan köra direkt i terminalen:
 
     $ go fmt
 
@@ -70,16 +68,13 @@ func main() {
 
 ### Förkunskaper Uppgift 4-6
 
-Read the following:
+- [Channels](http://yourbasic.org/golang/channels-explained/)
+- [Select](http://yourbasic.org/golang/select-explained/)
+- [Data races](http://yourbasic.org/golang/data-races-explained/)
+- [Detecting data races](http://yourbasic.org/golang/detect-data-races/)
+- [Deadlock](http://yourbasic.org/golang/detect-deadlock/)
 
-- Read the following from the [Step-by-step guide to concurrency](http://yourbasic.org/golang/concurrent-programming/)
-  - [Channels](http://yourbasic.org/golang/channels-explained/)
-  - [Select](http://yourbasic.org/golang/select-explained/)
-  - [Data races](http://yourbasic.org/golang/data-races-explained/)
-  - [Detecting data races](http://yourbasic.org/golang/detect-data-races/)
-  - [Deadlock](http://yourbasic.org/golang/detect-deadlock/)
-
-### Uppgift 4 - Debugging Concurrent Programs (HANDIN)
+### Uppgift 4 - Debugging Concurrent Programs
 
 Explain what is wrong in the code below, and then fix the code so that all data really passes
 through the channel and gets printed.
@@ -129,7 +124,7 @@ func Print(ch <-chan int) {
 
 See: [bug02.go](code/bug02.go) for source code to modify.
 
-### Uppgift 5 - Many Senders; Many Receivers (HANDIN)
+### Uppgift 5 - Many Senders; Many Receivers
 
 The program [many2many.go](code/many2many.go) contains four producers that together send 32 strings over a channel.
 At the other end there are two consumers that receive the strings.
