@@ -16,7 +16,6 @@ Read the following:
 In this task we shall follow the online exercises hosted on [A Tour of Go](http://tour.golang.org/welcome/1). Start at the beginning and read through the tutorial. You are expected to submit solutions for the following exercises:
 
 - [Loops and Functions](http://tour.golang.org/flowcontrol/8)
-- [Slices](http://tour.golang.org/moretypes/18)
 - [Maps](http://tour.golang.org/moretypes/23)
 - [Fibbonacci Closure](http://tour.golang.org/moretypes/26)
 
