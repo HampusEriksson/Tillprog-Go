@@ -46,3 +46,19 @@ func main() {
 	fmt.Println(&a)
 
 }
+
+// Mutable - kan ändras
+// int - exempel
+// slice - exempel
+/*var x []int = []int{3, 4, 5}
+y := x // y och x pekar på samma slice
+y[0] = 100
+fmt.Println(y)*/
+// slice och maps beter sig "konstigt" - de pekar på en minnesplats
+// exempel - skicka in slice i en funktion
+// array skapar en kopia
+// Immutable
+// Pointers
+// fmt.Println(&x)
+// y:= &x
+// *y = 8
