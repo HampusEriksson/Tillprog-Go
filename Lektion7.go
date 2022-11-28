@@ -1,5 +1,7 @@
 // Lektion 7 - Förkunskaper till Uppgift 1 - 3
 // Gorutines & channels
+// https://yourbasic.org/golang/goroutines-explained/
+// https://yourbasic.org/golang/channels-explained/
 
 package main
 
@@ -50,3 +52,9 @@ v, ok := <-ch     // v is "", ok is false.
 for v := range ch {
 	fmt.Println(v) // Will not be executed.
 }*/
+
+/*If the capacity of a channel is zero or absent,
+  the channel is unbuffered and the sender blocks until the receiver has received the value.
+If the channel has a buffer, the sender blocks only until the value has been copied to the buffer;
+if the buffer is full, this means waiting until some receiver has retrieved a value.
+Receivers always block until there is data to receive.*/
