@@ -35,6 +35,7 @@ Now, write a complete program that runs indefinitely and prints the following re
 - every 8th hour: `Klockan är XX.XX: Dags att arbeta`
 - every 24th hour: `Klockan är XX.XX: Dags att sova`
 
+Tips: Try with second instead of hour.
 To prevent the main program from exiting early, the following statement can be used:
 
 ```Go

@@ -1,6 +1,4 @@
-x = [1, 2, 3]
-y = x
-print(y, x)
+def test(a,b):
+    print(a+b)
 
-y[0] = 100
-print(y, x)
+test(5)
