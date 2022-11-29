@@ -5,53 +5,57 @@
 
 package main
 
-/*
-	func Publish(text string, delay time.Duration) {
-		go func() {
-			time.Sleep(delay)
-			fmt.Println("BREAKING NEWS:", text)
-		}()
-	}
-*/
-func main() {
+import (
+	"fmt"
+	"time"
+)
+
+func Publish(text string, delay time.Duration) {
+	go func() {
+		time.Sleep(delay)
+		fmt.Println("BREAKING NEWS:", text)
+	}()
 }
 
-// thread - körs parallelt
-// gorutine - lightweight thread
-// go fmt.Println("Hello from another goroutine")
-// fmt.Println("Hello from main goroutine")
-// time.Sleep(time.Second)
-/*Publish("A goroutine starts a new thread.", 5*time.Second)
-fmt.Println("Let’s hope the news will published before I leave.")
+func main() {
+	// thread - körs parallelt
+	// gorutine - lightweight thread
+	/*
+		go fmt.Println("Hello from another goroutine")
+		fmt.Println("Hello from main goroutine")
+		time.Sleep(time.Second * 2)
 
-// Wait for the news to be published.
-time.Sleep(10 * time.Second)
+		Publish("A goroutine starts a new thread.", 5*time.Second)
+		fmt.Println("Let’s hope the news will published before I leave.")
 
-fmt.Println("Ten seconds later: I’m leaving now.")*/
+		// Wait for the news to be published.
+		time.Sleep(10 * time.Second)
 
-// time.Now()
+		fmt.Println("Ten seconds later: I’m leaving now.")
+	*/
+	fmt.Println(time.Now().Hour(), ":", time.Now().Minute())
 
-// int_ch := make(chan int)
-// string_ch := make(chan string, 10)
+	//int_ch := make(chan int)
+	//string_ch := make(chan string, 10)
 
-// Send 3 on the channel. ic <- 3
-// Receive a string from the channel. n := <-sc
+	ch := make(chan string)
+	go func() {
+		ch <- "Hello!"
+		close(ch)
+	}()
 
-/*ch := make(chan string)
-go func() {
-	ch <- "Hello!"
-	close(ch)
-}()
+	fmt.Println(<-ch) // Print "Hello!".
+	fmt.Println(<-ch) // Print the zero value "" without blocking.
+	fmt.Println(<-ch) // Once again print "".
+	//v, ok := <-ch     // v is "", ok is false because channel is closed.
 
-fmt.Println(<-ch) // Print "Hello!".
-fmt.Println(<-ch) // Print the zero value "" without blocking.
-fmt.Println(<-ch) // Once again print "".
-v, ok := <-ch     // v is "", ok is false.
+	// Receive values from ch until closed.
+	for v := range ch {
+		fmt.Println(v) // Will not be executed.
+	}
+}
 
-// Receive values from ch until closed.
-for v := range ch {
-	fmt.Println(v) // Will not be executed.
-}*/
+/**/
 
 /*If the capacity of a channel is zero or absent,
   the channel is unbuffered and the sender blocks until the receiver has received the value.
