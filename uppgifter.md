@@ -27,6 +27,7 @@ In this task you will explore time functions using Go. Write a function `Remind(
 
     Klockan är XX.XX: + <text>
 
+Skeleton-code can be found [here](https://github.com/HampusEriksson/Tillprog-Go/blob/main/Skeletons/Upp2Skeleton.go)
 The output will repeatedly print the output after the given delay, and `XX.XX` should be replaced with the current time, and `<text>` should be replaced by the contents of `text`.
 
 Now, write a complete program that runs indefinitely and prints the following reminders:
