@@ -70,16 +70,17 @@ func main() {
 
 ### Förkunskaper Uppgift 4-6
 
-- [Channels](http://yourbasic.org/golang/channels-explained/)
+- [Channels - 4](http://yourbasic.org/golang/channels-explained/)
 - [Select](http://yourbasic.org/golang/select-explained/)
-- [Data races](http://yourbasic.org/golang/data-races-explained/)
-- [Detecting data races](http://yourbasic.org/golang/detect-data-races/)
-- [Deadlock](http://yourbasic.org/golang/detect-deadlock/)
+- [Data races - 4](http://yourbasic.org/golang/data-races-explained/)
+- [Detecting data races - 4](http://yourbasic.org/golang/detect-data-races/)
+- [Deadlock - 4](http://yourbasic.org/golang/detect-deadlock/)
+- [Waitgroups - 5](https://yourbasic.org/golang/wait-for-goroutines-waitgroup/)
 
 ### Uppgift 4 - Debugging Concurrent Programs
 
-Explain what is wrong in the code below, and then fix the code so that all data really passes
-through the channel and gets printed.
+Förklara vad som är fel i de två programmen nedan. Skriv detta som kommentarer i din kod.
+Fixa sedan så att all data passerar genom kanalerna och printas ut som avsett.
 
 #### Bug 1
 
@@ -132,6 +133,7 @@ The program [many2many.go](code/many2many.go) contains four producers that toget
 At the other end there are two consumers that receive the strings.
 Describe what happens, and explain why it happens, if you make the following changes in the program.
 Try first to reason your way through, and then test your hypothesis by changing and running the program.
+Lämna in svaren på frågorna i ett google-doc eller som kommentarer i din kod.
 
 - What happens if you switch the order of the statements `wgp.Wait()` and `close(ch)` in the end of the `main` function?
 - What happens if you move the `close(ch)` from the `main` function and instead close the channel in the end of the function `Produce`?
@@ -144,7 +146,7 @@ Finally, modify the code by adding a new WaitGroup that waits for all consumers 
 ### Uppgift 6 - Pythia, the Oracle of Delphi
 
 The code in [oracle.go](code/oracle.go) contains the outline for a program that will answer 'questions'.
-Complete the `Oracle` function. You should not modify the `main` function or other function signatures.
+Complete the `Oracle` function. **You should not modify the `main` function or other function signatures.**
 Note that answers should not appear immediately; instead there should be a delay or **pause for thought**.
 Also, the Oracle will still print **helpful predictions** even if there are not any questions.
 You may structure your solution into multiple functions.
@@ -163,8 +165,6 @@ Whilst the `Oracle` function is the most important of the assignment, you may al
 - Take a look at the story of [ELIZA](https://en.wikipedia.org/wiki/ELIZA)
 
 ### Förkunskaper Uppgift 7-9
-
-Read the following:
 
 - [Mutual exclusion](http://yourbasic.org/golang/mutex-explained/)
 - [Efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/)
