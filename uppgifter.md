@@ -70,12 +70,12 @@ func main() {
 
 ### Förkunskaper Uppgift 4-6
 
-- [Channels - 4](http://yourbasic.org/golang/channels-explained/)
+- [Channels](http://yourbasic.org/golang/channels-explained/)
 - [Select](http://yourbasic.org/golang/select-explained/)
-- [Data races - 4](http://yourbasic.org/golang/data-races-explained/)
-- [Detecting data races - 4](http://yourbasic.org/golang/detect-data-races/)
-- [Deadlock - 4](http://yourbasic.org/golang/detect-deadlock/)
-- [Waitgroups - 5](https://yourbasic.org/golang/wait-for-goroutines-waitgroup/)
+- [Data races](http://yourbasic.org/golang/data-races-explained/)
+- [Detecting data races](http://yourbasic.org/golang/detect-data-races/)
+- [Deadlock](http://yourbasic.org/golang/detect-deadlock/)
+- [Waitgroups](https://yourbasic.org/golang/wait-for-goroutines-waitgroup/)
 
 ### Uppgift 4 - Debugging Concurrent Programs
 
