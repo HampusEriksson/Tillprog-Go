@@ -156,7 +156,7 @@ In the `Oracle` function you should start three indefinite go-routines.
 
 - A go-routine that receives all questions, and for each incoming question, creates a separate go-routine that answers that question
 - A go-routine that generates predictions
-- A go-routine that receives all answers and predictions, and prints then to stdout
+- A go-routine that receives all answers and predictions, and prints them
 
 Whilst the `Oracle` function is the most important of the assignment, you may also want to improve the answer-algorithm.
 
