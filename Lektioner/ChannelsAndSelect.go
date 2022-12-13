@@ -9,11 +9,16 @@ import (
 )
 
 func main() {
-	// unbuffered channel of ints
-	//ic := make(chan int)
+	// unbuffered channel of ints - wait for receiver
+	/*ic := make(chan int)
+
+	ic <- 5
+	fmt.Println(<-ic)*/
 
 	// buffered channel with room for 10 strings
-	//sc := make(chan string, 10)
+	/*sc := make(chan string, 10)
+	sc <- "Hello"
+	fmt.Println(<-sc)*/
 
 	/*If the capacity of a channel is zero or absent,
 	the channel is unbuffered and the sender blocks until the receiver has received the value.

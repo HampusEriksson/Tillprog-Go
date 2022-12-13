@@ -5,12 +5,14 @@ import (
 	"sync"
 )
 
+var wg sync.WaitGroup
+
 func main() {
-	var wg sync.WaitGroup
+
 	wg.Add(2)
 	go func() {
 		// Do work.
-		wg.Add(2)
+		wg.Add(-1)
 	}()
 	go func() {
 		// Do work.

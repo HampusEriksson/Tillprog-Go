@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// go run -race Lektion9del2.go
-	race()
+	//race()
 	fmt.Println(getNumber())
 }
 
@@ -39,7 +39,7 @@ func sharingIsCaring() {
 
 func getNumber() int {
 	// https://www.sohamkamani.com/golang/data-races/
-	var i int
+	i := 0
 	go func() {
 		i = 5
 	}()
