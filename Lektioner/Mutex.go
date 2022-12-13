@@ -1,5 +1,5 @@
 // https://yourbasic.org/golang/mutex-explained/
-
+// Sometimes it’s more convenient to synchronize data access by explicit locking instead of using channels.
 package main
 
 import (
