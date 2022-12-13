@@ -184,7 +184,7 @@ Take a look at the program [matching.go](code/matching.go). Explain what happens
 
 ### Uppgift 8 - Fractal Images
 
-The file [julia.go](code/julia.go) contains a program that creates images and writes them to file. The program is pretty slow. Your assignment is to divide the computations so that they run in parallel on all available CPUs. Use the ideas from the example in the [efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/) section of the course literature.
+The file [julia.go](code/julia.go) contains a program that creates images and writes them to file. The program is pretty slow. Your assignment is to divide the computations so that they run in parallel on all available CPUs. Use the ideas from the example in the [efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/).
 
 You can also make changes to the program, such as using different functions and other colourings.
 
