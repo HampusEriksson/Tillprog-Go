@@ -4,24 +4,14 @@
 
 [Step-by-step guide to concurrency](http://yourbasic.org/golang/concurrent-programming/)
 
-### Förkunskaper Uppgift 1-3
+### Förkunskaper Uppgift 1-2
 
 - [Why Go? – Key advantages you may have overlooked](https://yourbasic.org/golang/advantages-over-java-python/)
 - [Goroutines](http://yourbasic.org/golang/goroutines-explained/)
 - [Channels](https://yourbasic.org/golang/channels-explained/)
 
-### Uppgift 1
 
-I denna uppgift ska du göra två uppgifter från [A Tour of Go](http://tour.golang.org/welcome/1). Dessa uppgifter är:
-
-- [Loops and Functions](http://tour.golang.org/flowcontrol/8)
-- [Maps](http://tour.golang.org/moretypes/23)
-
-Kom ihåg att formatera koden. GO har ett inbyggt kommand som du kan köra direkt i terminalen:
-
-    $ go fmt
-
-### Uppgift 2 - Alarm Clock
+### Uppgift 1 - Alarm Clock
 
 In this task you will explore time functions using Go. Write a function `Remind(text string, delay time.Duration)` that will print the following output:
 
@@ -45,7 +35,7 @@ select { }
 
 In order to access time related functions, you should investigate the [time package](https://golang.org/pkg/time/), and discover how to get the current time in Go and also how you can format it neatly for human users to understand. Remember to test and format your code.
 
-### Uppgift 3
+### Uppgift 2
 
 In this task you will complete the following partial program. It adds all of the numbers in an array by splitting the array in half, then having two Go routines take care of each half. Partial results are then sent over a channel. Remember to test and format your code.
 
@@ -68,7 +58,7 @@ func main() {
 }
 ```
 
-### Förkunskaper Uppgift 4-6
+### Förkunskaper Uppgift 3-5
 
 - [Channels](http://yourbasic.org/golang/channels-explained/)
 - [Select](http://yourbasic.org/golang/select-explained/)
@@ -77,7 +67,7 @@ func main() {
 - [Deadlock](http://yourbasic.org/golang/detect-deadlock/)
 - [Waitgroups](https://yourbasic.org/golang/wait-for-goroutines-waitgroup/)
 
-### Uppgift 4 - Debugging Concurrent Programs
+### Uppgift 3 - Debugging Concurrent Programs
 
 Förklara vad som är fel i de två programmen nedan. Skriv detta som kommentarer i din kod.
 Fixa sedan så att all data passerar genom kanalerna och printas ut som avsett.
@@ -127,7 +117,7 @@ func Print(ch <-chan int) {
 
 See: [bug02.go](code/bug02.go) for source code to modify.
 
-### Uppgift 5 - Many Senders; Many Receivers
+### Uppgift 4 - Many Senders; Many Receivers
 
 The program [many2many.go](code/many2many.go) contains four producers that together send 32 strings over a channel.
 At the other end there are two consumers that receive the strings.
@@ -143,7 +133,7 @@ Lämna in svaren på frågorna i ett google-doc eller som kommentarer i din kod.
 
 Finally, modify the code by adding a new WaitGroup that waits for all consumers to finish.
 
-### Uppgift 6 - Pythia, the Oracle of Delphi
+### Uppgift 5 - Pythia, the Oracle of Delphi
 
 The code in [oracle.go](code/oracle.go) contains the outline for a program that will answer 'questions'.
 Complete the `Oracle` function. **You should not modify the `main` function or other function signatures.**
@@ -164,14 +154,14 @@ Whilst the `Oracle` function is the most important of the assignment, you may al
 - The program can seem more human if the Oracle prints it answers one character at a time
 - Take a look at the story of [ELIZA](https://en.wikipedia.org/wiki/ELIZA)
 
-### Förkunskaper Uppgift 7-9
+### Förkunskaper Uppgift 6-8
 
 - [Mutual exclusion](http://yourbasic.org/golang/mutex-explained/)
 - [Efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/)
 - [Create a new image](https://yourbasic.org/golang/create-image/)
 - [HTTP server example](https://yourbasic.org/golang/http-server-example/)
 
-### Uppgift 7 - Matching Behaviour
+### Uppgift 6 - Matching Behaviour
 
 Take a look at the program [matching.go](code/matching.go). Explain what happens and why it happens if you make the following changes. Try first to reason about it, and then test your hypothesis by changing and running the program.
 
@@ -182,7 +172,7 @@ Take a look at the program [matching.go](code/matching.go). Explain what happens
 
 > **Hint:** Think about the order of the instructions and what happens with arrays of different lengths.
 
-### Uppgift 8 - Fractal Images
+### Uppgift 7 - Fractal Images
 
 The file [julia.go](code/julia.go) contains a program that creates images and writes them to file. The program is pretty slow. Your assignment is to divide the computations so that they run in parallel on all available CPUs. Use the ideas from the example in the [efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/).
 
@@ -192,7 +182,7 @@ How many CPUs does you program use? How much faster is your parallel version?
 
 > **Hint:** In more recent versions of Golang (since 1.5), the runtime will default to use as many operating system threads as it is allowed. To see differences in behaviour, refer to the [GOMAXPROCS](https://golang.org/pkg/runtime/#GOMAXPROCS) function and vary the value.
 
-### Uppgift 9 - Weather station
+### Uppgift 8 - Weather station
 
 The file [server.go](code/server.go) contains a program that simulates three independent weather stations that show the temperature at KTH. The results are published at the following addresses once the serves are operational:
 
