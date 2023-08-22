@@ -1,5 +1,3 @@
-print("Hej")
-print("Hej")
-print("Hej")
-print("Hej")
-print("Hej")
+name = "Hampus"
+
+print(f"Välkommen {name}.")

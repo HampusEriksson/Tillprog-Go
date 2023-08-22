@@ -44,9 +44,9 @@ func main() {
 		fmt.Println(z)
 	}
 
-	fmt.Println("Vad heter du?")
-	scanner.Scan()
-	name := scanner.Text()
+	var name string
+	fmt.Print("Enter your name: ")
+	fmt.Scan(&name)
 
 	switch name {
 
