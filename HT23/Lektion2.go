@@ -1,10 +1,7 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strconv"
 )
 
 func main() {
@@ -12,13 +9,22 @@ func main() {
 	x := 5
 	val := x < 5
 	fmt.Printf("%t\n", val)
-	// Lägg parenteser vid flera conditions
+
+	// AND &&
+	// OR ||
+	// NOT !
 	fmt.Println(x == 5 || x != 5 && x == 5)
 
-	scanner := bufio.NewScanner(os.Stdin)
+	var user_age int
 	fmt.Println("What's your age?")
-	scanner.Scan()
-	user_age, _ := strconv.ParseInt(scanner.Text(), 10, 64)
+	fmt.Scan(&user_age)
+
+	// Samma jämförelser som Python. < > osv
+	// < > <= >= != ==
+	// Kan inte jämföra float och int
+	// If
+	// Else if
+	// Else
 
 	if user_age > 65 {
 		fmt.Println("You are retired")
@@ -32,6 +38,9 @@ func main() {
 		fmt.Println("You are a baby")
 	}
 	// While - vad är det???
+	// For
+	// for x:=0; x<5; x++
+	// break & continue - samma som python
 
 	y := 5
 
@@ -47,6 +56,10 @@ func main() {
 	var name string
 	fmt.Print("Enter your name: ")
 	fmt.Scan(&name)
+
+	// Switch
+	// case x:
+	// default:
 
 	switch name {
 
@@ -64,19 +77,3 @@ func main() {
 	}
 
 }
-
-// Samma jämförelser som Python. < > osv
-// < > <= >= != ==
-// Kan inte jämföra float och int
-// AND &&
-// OR ||
-// NOT !
-// If
-// Else if
-// Else
-// For
-// for x:=0; x<5; x++
-// break & continue - samma som python
-// Switch
-// case x:
-// default:
