@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
@@ -9,11 +10,17 @@ func main() {
 	x := 5
 	val := x < 5
 	fmt.Printf("%t\n", val)
+	fmt.Println(val)
 
-	// AND &&
-	// OR ||
+	// AND && - shift + 6
+	// OR || - alt gr + <
 	// NOT !
+	// && har prioritet över ||
 	fmt.Println(x == 5 || x != 5 && x == 5)
+
+	var name2 string
+	fmt.Println("Enter your name: ")
+	fmt.Scan(&name2)
 
 	var user_age int
 	fmt.Println("What's your age?")
@@ -44,18 +51,27 @@ func main() {
 
 	y := 5
 
+	// Vi kan använda for som en while-loop
 	for y < 10 {
+		// ökar y med ett. Samma som y +=1 i Python
 		y++
 		fmt.Println(y)
 	}
 
-	for z := 0; z < 5; z++ {
+	for z := 0; z < 15; z += 2 {
 		fmt.Println(z)
 	}
+
+	//for i in range(0,15,2):
+	//	print(i)
 
 	var name string
 	fmt.Print("Enter your name: ")
 	fmt.Scan(&name)
+
+	// .Title är som capitalize i Python!
+	name_cap := strings.Title(name)
+	fmt.Println(name_cap)
 
 	// Switch
 	// case x:
@@ -63,17 +79,17 @@ func main() {
 
 	switch name {
 
-	case "Jubin":
-		fmt.Println("Hej")
+	case "Leroy":
+		fmt.Println("Du gillar att gå till skolan.")
 
-	case "Leon":
-		fmt.Println("Nej")
+	case "Isak":
+		fmt.Println("Du gillar att spela roblox.")
 
-	case "Daniel":
-		fmt.Println("Tåååg")
+	case "M.a.n":
+		fmt.Println("Du gillar att gå till skolan med Leroy.")
 
 	default:
-		fmt.Println("Inget case assignat")
+		fmt.Println("Du är inte en av de tre coola.")
 	}
 
 }
