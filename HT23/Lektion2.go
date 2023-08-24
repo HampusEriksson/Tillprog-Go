@@ -70,8 +70,8 @@ func main() {
 	fmt.Scan(&name)
 
 	// .Title är som capitalize i Python!
-	name_cap := strings.Title(name)
-	fmt.Println(name_cap)
+	name = strings.Title(name)
+	fmt.Println(name)
 
 	// Switch
 	// case x:
