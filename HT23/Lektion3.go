@@ -22,6 +22,7 @@ func main() {
 	// append, lite annorlunda än Python
 	// Vi slår ihop en lista med ett element och sparar i samma variabel
 	students = append(students, "Erik")
+	// students.append("Erik") i Python
 	fmt.Println(students)
 
 	// len = längden av en slice
@@ -31,14 +32,19 @@ func main() {
 	for i := 0; i < len(students); i++ {
 		fmt.Println(students[i])
 	}
-
 	// for index, element := range arraynamn
 	for index, student := range students {
 		if student != "" {
-			fmt.Println(index, " : ", student)
+			fmt.Println(index, ":", student)
 		}
 
 	}
+	var indexToRemove int
+	fmt.Print("Enter the index of the student to remove: ")
+	fmt.Scan(&indexToRemove)
+
+	// Remove the element at the specified index
+	students = append(students[:indexToRemove], students[indexToRemove+1:]...)
 
 	// Slices har inte fast size - Arrays har fast size
 	// It's a good idea to use slices unless you have a specific reason to use arrays, such as one of the reasons mentioned above.
