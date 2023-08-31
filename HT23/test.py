@@ -1,3 +1,7 @@
-name = "Hampus"
 
-print(f"Välkommen {name}.")
+
+def main():
+    pass
+
+
+main()
