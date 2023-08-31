@@ -14,9 +14,9 @@ func pythagoras(a, b float64) float64 {
 	return math.Sqrt(math.Pow(a, 2) + math.Pow(b, 2))
 }
 
-// defer - görs i slutet
 // behöver inte säga return x,y
 func sums(a, b int) (sum int) {
+	// defer - görs i slutet
 	defer fmt.Println("Nu är funktionen returnerad")
 	fmt.Println("Vi ska summera", a, b)
 	sum = a + b
