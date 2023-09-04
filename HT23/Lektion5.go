@@ -26,11 +26,13 @@ func check_username(username *string) {
 func main() {
 	// slice - exempel
 	// slice och maps beter sig "konstigt" - de pekar på en minnesplats
+	// Mutable - kan ändras
 	var x []int = []int{1, 2, 3}
 	y := x // y och x pekar på samma slice
 	changelist(x)
 	fmt.Println(y, x)
 
+	// Immutable - kan inte ändras
 	var liar string = "Johan"
 	changestring(liar)
 	fmt.Println(liar)
@@ -39,26 +41,16 @@ func main() {
 	check_username(&username)
 	fmt.Println(username)
 
+	// int - exempel
 	var a int = 5
 	b := a
 	b = 100
 	fmt.Println(a, b)
 	fmt.Println(&a)
 
+	i := 100
+	fmt.Println(&i)
+	z := &i
+	*z = 8
+	fmt.Println(i, &i, z, &z)
 }
-
-// Mutable - kan ändras
-// int - exempel
-// slice - exempel
-/*var x []int = []int{3, 4, 5}
-y := x // y och x pekar på samma slice
-y[0] = 100
-fmt.Println(y)*/
-// slice och maps beter sig "konstigt" - de pekar på en minnesplats
-// exempel - skicka in slice i en funktion
-// array skapar en kopia
-// Immutable
-// Pointers
-// fmt.Println(&x)
-// y:= &x
-// *y = 8
