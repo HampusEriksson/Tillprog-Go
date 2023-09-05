@@ -24,30 +24,35 @@ func check_username(username *string) {
 
 }
 func main() {
-	// slice - exempel
-	// slice och maps beter sig "konstigt" - de pekar på en minnesplats
-	// Mutable - kan ändras
-	var x []int = []int{1, 2, 3}
-	y := x // y och x pekar på samma slice
-	changelist(x)
-	fmt.Println(y, x)
+	/*
+			// slice - exempel
+			// slice och maps beter sig "konstigt" - de pekar på en minnesplats
+			// Mutable - kan ändras
+			var x []int = []int{1, 2, 3}
+			y := x // y och x pekar på samma slice
+			changelist(x)
+			fmt.Println(y, x)
 
-	// Immutable - kan inte ändras
-	var liar string = "Johan"
-	changestring(liar)
-	fmt.Println(liar)
+			// Immutable - kan inte ändras
+			var liar string = "Johan"
+			liar2 := liar
+			changestring(liar)
+			liar = "Dante"
+			fmt.Println(liar, liar2)
 
-	var username string = "fansatanmolarki"
-	check_username(&username)
-	fmt.Println(username)
+			var username string = "fansatanmolarki"
 
-	// int - exempel
-	var a int = 5
-	b := a
-	b = 100
-	fmt.Println(a, b)
-	fmt.Println(&a)
 
+			check_username(&username)
+			fmt.Println(username)
+
+		// int - exempel
+		var a int = 5
+		b := a
+		b = 100
+		fmt.Println(a, b)
+		fmt.Println(&a, &b)
+	*/
 	i := 100
 	fmt.Println(&i)
 	z := &i

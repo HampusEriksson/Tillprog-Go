@@ -48,18 +48,14 @@ func main() {
 	school2 := &School{"KTH"}
 	student1 := &Student{"Ludwig", 18, school1}
 	student2 := &Student{"Leon", 17, school1}
-	teacher1 := &Teacher{"Daniel Sandin", 62, school1}
+	teacher1 := &Teacher{"Daniel", 62, school1}
+	student1.name = "Hampus"
 	fmt.Println(student1.school.name)
 	fmt.Println(student2.over18())
 	School_persons := []Person{student1, student2, teacher1}
-
+	fmt.Println(School_persons)
 	for _, person := range School_persons {
 		person.changeSchool(school2)
 	}
 
 }
-
-// Behöver inte använda * för att "packa upp" för structs
-// struct som attribut
-// Ska du ändra på ett objekt - använd pointers!
-// School_persons := []type{p1, p2}
