@@ -1,8 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 func main() {
-	name := "Alice"
-	fmt.Println(name[::-1])
+	scanner := bufio.NewScanner(os.Stdin)
+	if scanner.Scan() {
+		line := scanner.Text()
+		fmt.Printf("Input was: %q\n", line)
+	}
 }
