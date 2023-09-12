@@ -22,6 +22,8 @@ func main() {
 
 	go fmt.Println("Hello from another goroutine")
 	fmt.Println("Hello from main goroutine")
+	fmt.Println("Hello from main goroutine")
+	fmt.Println("Hello from main goroutine")
 	time.Sleep(time.Second * 2)
 
 	Publish("A goroutine starts a new thread.", 5*time.Second)
@@ -31,7 +33,7 @@ func main() {
 	time.Sleep(10 * time.Second)
 
 	fmt.Println("Ten seconds later: I’m leaving now.")
-
+	fmt.Println(time.Now())
 	fmt.Println(time.Now().Hour(), ":", time.Now().Minute())
 
 }

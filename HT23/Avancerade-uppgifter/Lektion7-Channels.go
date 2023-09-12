@@ -19,6 +19,7 @@ func main() {
 	//string_ch := make(chan string, 10)
 
 	ch := make(chan string)
+
 	go func() {
 		ch <- "Hello!"
 
@@ -30,8 +31,36 @@ func main() {
 	fmt.Println(<-ch) // Once again print "".
 	//v, ok := <-ch     // v is "", ok is false because channel is closed.
 
+	ch2 := make(chan string)
+
+	go func() {
+		for {
+			var input string
+			fmt.Scanln(&input)
+			ch2 <- input
+
+			if input == "exit" {
+				break
+			}
+		}
+
+		close(ch2)
+	}()
+
 	// Receive values from ch until closed.
-	for v := range ch {
-		fmt.Println("Från kanalen:", v) // Will not be executed.
+	for value := range ch2 {
+		fmt.Println("Från kanalen:", value) // Will not be executed.
 	}
+
+	string_ch := make(chan string, 10)
+
+	go func() {
+		string_ch <- "Hello!"
+		close(string_ch)
+	}()
+
+	fmt.Println(<-string_ch)
+	fmt.Println(<-string_ch)
+	fmt.Println(<-string_ch)
+
 }
