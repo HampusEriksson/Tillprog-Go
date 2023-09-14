@@ -1,5 +1,7 @@
 package main
 
+// Kod från ChatGPT
+
 import (
 	"fmt"
 	"math/rand"
