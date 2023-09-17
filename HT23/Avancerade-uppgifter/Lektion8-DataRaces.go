@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-	// go run -race Lektion9del2.go
 	//race()
 	fmt.Println(getNumber())
 }
