@@ -28,11 +28,12 @@ func main() {
 	// A select statement blocks until at least one of it’s cases can proceed.
 
 	ch := make(chan string, 1)
+	ch2 := make(chan string, 1)
+
 	go func() {
 		ch <- "Hello!"
 	}()
 
-	ch2 := make(chan string, 1)
 	go func() {
 		ch2 <- "Hello!"
 	}()

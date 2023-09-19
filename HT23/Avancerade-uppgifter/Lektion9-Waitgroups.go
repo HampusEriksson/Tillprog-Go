@@ -9,7 +9,7 @@ var wg sync.WaitGroup
 
 func main() {
 
-	wg.Add(2)
+	wg.Add(4)
 	go func() {
 		// Do work.
 		wg.Add(-1)
@@ -18,6 +18,14 @@ func main() {
 		// Do work.
 		wg.Done()
 	}()
+	go do_work()
+	go do_work()
+
 	wg.Wait()
 	fmt.Println("Waitgroup is done waiting")
+}
+
+func do_work() {
+	// Do work.
+	wg.Done()
 }
