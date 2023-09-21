@@ -8,24 +8,21 @@ import (
 var counter = 0
 var wg sync.WaitGroup
 
-func increment(ch chan struct{}, done chan bool) {
+func increment() {
 	defer wg.Done()
+	// For i in range(1000)
 	for i := 0; i < 1000; i++ {
 		counter++
 	}
-	ch <- struct{}{}
-	done <- true
 }
 
 func main() {
-	ch := make(chan struct{})
-	done := make(chan bool)
-	wg.Add(2)
-	go increment(ch, done)
-	go increment(ch, done)
+
+	wg.Add(3)
+	go increment()
+	go increment()
+	go increment()
 	wg.Wait()
-	close(ch)
-	<-done // Wait for both goroutines to finish
-	<-done
+
 	fmt.Println("Counter:", counter)
 }
