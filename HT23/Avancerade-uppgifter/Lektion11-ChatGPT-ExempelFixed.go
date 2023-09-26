@@ -19,7 +19,8 @@ func increment() {
 }
 
 func main() {
-	wg.Add(2)
+	wg.Add(3)
+	go increment()
 	go increment()
 	go increment()
 	wg.Wait()

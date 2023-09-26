@@ -7,9 +7,7 @@ import (
 )
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	if scanner.Scan() {
-		line := scanner.Text()
-		fmt.Printf("Input was: %q\n", line)
-	}
+	x:=0
+	*y := &x
+	**z := &y
 }
